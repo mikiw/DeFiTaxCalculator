@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DeathCryptoAndTaxes\DeathCryptoAndTaxes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestData\Abi-0x7a250d5630b4cf539739df2c5dacb4c659f2488d.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\InputAddLiquidityEth.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\InputRemoveLiquidityEthWithPermit.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\InputSwapExactEthForTokens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\InputSwapExactTokensForEth.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\InputSwapExactTokensForTokens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
