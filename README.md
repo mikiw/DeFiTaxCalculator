@@ -9,7 +9,7 @@ I'm not sure if any API provides clean data from Uniswap contracts, maybe tender
 
 This solution can also be rewritten to use only web3 so we could only interact with a local or remote Ethereum node using HTTP, IPC or WebSocket and avoid Etherscan or any APIs. We could also get prices of tokens from oracles. I guess it's a topic for another conversation whether to use API or not, it's a question about money, security (DNS spoofing), scalability, SLA etc..
 
-If I could back time I would use node.js and web3, it would be easier and faster to write this in JS (which I hate) comparing to exotic Nethereum in C#. Nethereum is poorly documented and a lot of basic web3 functions are still missing there.
+If I could back time I would use node.js and web3, it would be easier and faster to write this in JS comparing to exotic Nethereum in C#. Nethereum is poorly documented and a lot of basic web3 functions are still missing there.
 
 For Http calls I used IHttpClientFactory client to avoid socket exhaustion (https://josef.codes/you-are-probably-still-using-httpclient-wrong-and-it-is-destabilizing-your-software/).
 
