@@ -3,11 +3,9 @@
 Death Crypto And Taxes, only sure things to come in the future! Still not sure about death...
 
 ## Info
-I started my task by getting transactions from Etherscan. Later I realized that Etherscan doesn't provide all data in a clean way as they do on-page so to interpret contracts transactions inputs I used the Nethereum library. 
+I started this project by getting transactions from Etherscan. Later I realized that Etherscan doesn't provide all data in a clean way as they do on-page so to interpret contracts transactions inputs so I used the Nethereum library. 
 
-I'm not sure if any API provides clean data from Uniswap contracts, maybe tenderly.co does. Anyway, I wanted to "read in all ETH transfers" and avoid too many APIs requests so decided to go low level with reading contract inputs (https://docs.soliditylang.org/en/develop/abi-spec.html). This solution reads all contracts inputs so it can also handle other DeFi protocols even when APIs for them don't exist.
-
-This solution can also be rewritten to use only web3 so we could only interact with a local or remote Ethereum node using HTTP, IPC or WebSocket and avoid Etherscan or any APIs. We could also get prices of tokens from oracles. I guess it's a topic for another conversation whether to use API or not, it's a question about money, security (DNS spoofing), scalability, SLA etc..
+I'm not sure if any API provides clean data from Uniswap contracts, maybe tenderly.co does. Anyway, I decided to go low level with reading contract inputs (https://docs.soliditylang.org/en/develop/abi-spec.html). This solution reads all contracts inputs so it can also handle other DeFi protocols even when APIs for them don't exist.
 
 If I could back time I would use node.js and web3, it would be easier and faster to write this in JS comparing to exotic Nethereum in C#. Nethereum is poorly documented and a lot of basic web3 functions are still missing there.
 
@@ -27,7 +25,7 @@ If I had infinite time resources I would do these things:
 - Get token prices in dollars
 - Implement tax calculation
 - Contracts ABIs can be cached or even stored in the system to avoid unnecessary calls (it's tricky when contract has upgrading mechanism -_-')
-- Handle 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 contract, it was impossible to read signature (don't know why)
+- Handle 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 contract, it was impossible to read signature (EVM optimalization)
 - Implement FlowFactory to handle other blockchain networks and avoid if else if else if
 - Implement other contracts on this wallet
 - Implement reading for Wrapped BTC: WBTC Token contract 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
