@@ -14,7 +14,8 @@ For Http calls I used IHttpClientFactory client to avoid socket exhaustion (http
 It's a console app but this solution can be adopted as scalable Azure function, AWS lambda, or your KT8s infrastructure.
 
 Results of processing are in file with really authentically and pioneer name "Results.txt".
-##Example
+
+## Example
 
 ```
 
