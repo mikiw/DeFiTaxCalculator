@@ -14,6 +14,30 @@ For Http calls I used IHttpClientFactory client to avoid socket exhaustion (http
 It's a console app but this solution can be adopted as scalable Azure function, AWS lambda, or your KT8s infrastructure.
 
 Results of processing are in file with really authentically and pioneer name "Results.txt".
+##Example
+
+```
+
+TxId: 0x2ca4428aa133a21299d8aece0096c24bc9375792054d4ea886b827752c287f37
+TimeStamp: 1601792511
+From: 0x299f770d90334c11f6ae65d770a7ce733f1154d7
+To: 0x7a250d5630b4cf539739df2c5dacb4c659f2488d
+Amount: 0.49834840440212511
+CumulativeGasUsed: 6782887
+Type: Contract interaction
+Protocol: Uniswap (v2)
+ContractFunction: addLiquidityETH [0.000000000001622391;0.000000000001630544;0.000000001601793664] 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+
+TxId: 0xb089ba25f6dc04ed45215abd6673690de8023766868bbc038fc8a1bb9d01bc5f
+TimeStamp: 1601792193
+From: 0x299f770d90334c11f6ae65d770a7ce733f1154d7
+To: 0x7a250d5630b4cf539739df2c5dacb4c659f2488d
+Amount: 0.5
+CumulativeGasUsed: 11925192
+Type: Contract interaction
+Protocol: Uniswap (v2)
+ContractFunction: swapExactETHForTokens [0.000000000001622375;0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2;0x2260fac5e5542a773aa44fbcfedf7c193bc2c599;0.000000001601793317] 0x299f770d90334c11f6ae65d770a7ce733f1154d7
+```
 
 ## Things TODO later
 If I had infinite time resources I would do these things:
